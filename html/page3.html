@@ -14,51 +14,45 @@
 					<label for ="txtUsername">Name</label>
 					<input class ="form-control" type ="text" id="txtUsername" name="txtUsername"></input>
 					</center>
-				</div>
-				<div class ="form-group">
 					<center>
-					<label for ="txtID">ID</label>
-					<input class ="form-control" type ="number" id="txtID" name="txtID"></input>
-					
-					<label for ="rdLop">Lớp</label><br>
-
-					<input type ="radio" name="rdLop">
-					<label >DA24TTA</label><br>
-
-					<input type ="radio" name="rdLop">
-					<label >DA24TTB</label><br>
-
-					<input type ="radio" name="rdLop">
-					<label >DA24TTC</label><br>
-
-					<input type ="radio" name="rdLop">
-					<label >DA24TTD</label><br>
-					
+					<label for ="txtSĐT">Phone</label>
+					<input class ="form-control" type ="tel" id="txtSĐT" name="txtSĐT"></input>
+					</center>
 					<center>
 					<label for ="txtBirthday">Birthday</label>
 					<input class ="form-control" type ="date" id="txtBirthday" name="txtBirthday"></input>
 					</center>
-					<label for ="rdGT">Gới tính</label><br>
-
-					<input type ="radio" name="rdGT">
-					<label >Nữ</label><br>
-
-					<input type ="radio" name="rdGT">
-					<label >Nam</label><br>
-
 					<center>
-					<label for ="txtSĐT">Phone</label>
-					<input class ="form-control" type ="number" id="txtSĐT" name="txtSĐT"></input>
+					<label for="address">Đ/C</label><br>
+						<input class="form-control" type="text" id="address" name="address" placeholder="Enter your address">
 					</center>
 				</div>
+				<div class ="form-group">
+					<center>
+					<label for ="txtID">ID</label>
+					<input class ="form-control" type ="password" id="txtID" name="txtID"></input>
+					<br>
+					<label for ="rdLop">Lớp</label><br><br>
+					<label><input type ="radio" name="rdLop">DA24TTA</label>
+					<label><input type ="radio" name="rdLop">DA24TTB</label>
+					<label><input type ="radio" name="rdLop">DA24TTC</label>
+					<label><input type ="radio" name="rdLop">DA24TTD</label>
+					<br>
+					<br>
+					<label for ="rdGT">Gới tính</label><br><br>
+					<label><input type ="radio" name="rdGT">Nữ</label>
+					<label><input type ="radio" name="rdGT">Nam</label>
+				</div>
+				
+				<textarea id="message" row="4" placeholder="Giới thiệu về bản thân....."></textarea>
 				<center>
-				<input class="button" type="submit" id="sblogin" name="sblogin" value="Đăng nhập"></input>
-				<input class="button" type="reset" id="rsCancel" name="rsCancel" value="Nhập lại"></input>
+				<input class="button" type="submit" id="sbGui" name="sbGui" value="Gửi"></input>
 				</center>
 			</form>
 
 		</div>
 		
+	
 	</body>
 
 </html>

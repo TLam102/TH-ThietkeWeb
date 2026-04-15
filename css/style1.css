@@ -1,4 +1,8 @@
-﻿avt.td,th{
+﻿body{
+	background-color: antiquewhite;
+}
+
+avt.td,th{
 	border: 2px solid pink;
 }
 
