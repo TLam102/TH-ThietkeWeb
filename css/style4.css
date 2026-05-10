@@ -1,20 +1,165 @@
-﻿*{
- margin-top: 20px;
-}
-#Thanhtoan,th,td{
-    border-collapse: collapse;
-    border:2px solid rgb(9, 136, 240);
-}
-#Thanhtoan{
-    border-collapse: collapse;
-	border: 2px solid pink;
-	margin: 20px auto;
-	font-size:20px;
-	width: 80%;
-    text-align: center;
-}
-caption{
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
+﻿
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #d6d2cf, #c1b7b0, #a89f99, #8c8680);
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5em;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .navlink {
+            color: rgba(255, 255, 255, 0.95);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .navlink::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25));
+            transition: left 0.4s;
+        }
+
+        .navlink:hover::before { left: 100%; }
+
+        .navlink:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            padding: 40px 20px;
+            min-height: calc(100vh - 60px);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* ===== TABLE WRAPPER ===== */
+        .table-wrapper {
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            padding: 32px 36px;
+            width: 100%;
+            max-width: 780px;
+        }
+
+        .table-title {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+
+        /* ===== TABLE ===== */
+        #Thanhtoan {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1em;
+            color: white;
+        }
+
+        #Thanhtoan th {
+            background: rgba(9, 136, 240, 0.45);
+            color: white;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        #Thanhtoan td {
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        #Thanhtoan tbody tr:hover td {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        #Thanhtoan tbody tr:nth-child(even) td {
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        #Thanhtoan tbody tr:nth-child(even):hover td {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        /* Cột tên sản phẩm căn trái */
+        #Thanhtoan td:nth-child(2) {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        /* Thành tiền highlight */
+        .tt {
+            color: #ffe082;
+            font-weight: 600;
+        }
+
+        /* Hàng tổng */
+        .row-total td {
+            background: rgba(9, 136, 240, 0.35) !important;
+            font-weight: 700;
+            font-size: 1.05em;
+            color: white;
+            border-top: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        #tong {
+            color: #ffe082;
+            font-size: 1.15em;
+        }
+  

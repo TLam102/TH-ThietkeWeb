@@ -1,58 +1,68 @@
-﻿<DOCTYPE html>
-<html lang ="vi">
-	<head>
-		<title> Đăng Ký</title>
-		<mate charset= "utf-8">
-		<link rel="stylesheet" href ="../css/style3.css">
-	</head>
-	<body>
-		<div class ="container">
-			<form id="frmLogin">
-				<h3 id="title">Đăng Ký</h3>
-				<div class="form-group">
-					<center>
-					<label for ="txtUsername">Name</label>
-					<input class ="form-control" type ="text" id="txtUsername" name="txtUsername"></input>
-					</center>
-					<center>
-					<label for ="txtSĐT">Phone</label>
-					<input class ="form-control" type ="tel" id="txtSĐT" name="txtSĐT"></input>
-					</center>
-					<center>
-					<label for ="txtBirthday">Birthday</label>
-					<input class ="form-control" type ="date" id="txtBirthday" name="txtBirthday"></input>
-					</center>
-					<center>
-					<label for="address">Đ/C</label><br>
-						<input class="form-control" type="text" id="address" name="address" placeholder="Enter your address">
-					</center>
-				</div>
-				<div class ="form-group">
-					<center>
-					<label for ="txtID">ID</label>
-					<input class ="form-control" type ="password" id="txtID" name="txtID"></input>
-					<br>
-					<label for ="rdLop">Lớp</label><br><br>
-					<label><input type ="radio" name="rdLop">DA24TTA</label>
-					<label><input type ="radio" name="rdLop">DA24TTB</label>
-					<label><input type ="radio" name="rdLop">DA24TTC</label>
-					<label><input type ="radio" name="rdLop">DA24TTD</label>
-					<br>
-					<br>
-					<label for ="rdGT">Gới tính</label><br><br>
-					<label><input type ="radio" name="rdGT">Nữ</label>
-					<label><input type ="radio" name="rdGT">Nam</label>
-				</div>
-				
-				<textarea id="message" row="4" placeholder="Giới thiệu về bản thân....."></textarea>
-				<center>
-				<input class="button" type="submit" id="sbGui" name="sbGui" value="Gửi"></input>
-				</center>
-			</form>
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Đăng Ký</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style3.css">
+</head>
+<body>
 
-		</div>
-		
-	
-	</body>
+    <div class="container">
+        <h3>Đăng Ký</h3>
 
+        <form id="frmLogin">
+            <div class="field">
+                <label for="txtUsername">Họ và tên</label>
+                <input type="text" id="txtUsername" name="txtUsername" placeholder="Nguyễn Văn A">
+            </div>
+
+            <div class="field">
+                <label for="txtSDT">Số điện thoại</label>
+                <input type="tel" id="txtSDT" name="txtSDT" placeholder="0901 234 567">
+            </div>
+
+            <div class="field">
+                <label for="txtBirthday">Ngày sinh</label>
+                <input type="date" id="txtBirthday" name="txtBirthday">
+            </div>
+
+            <div class="field">
+                <label for="address">Địa chỉ</label>
+                <input type="text" id="address" name="address" placeholder="Số nhà, đường, phường, quận...">
+            </div>
+
+            <div class="field">
+                <label for="txtID">Mã số sinh viên</label>
+                <input type="password" id="txtID" name="txtID" placeholder="••••••••">
+            </div>
+
+            <div class="field">
+                <label>Lớp</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="rdLop" value="A"> DA24TTA</label>
+                    <label><input type="radio" name="rdLop" value="B"> DA24TTB</label>
+                    <label><input type="radio" name="rdLop" value="C"> DA24TTC</label>
+                    <label><input type="radio" name="rdLop" value="D"> DA24TTD</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Giới tính</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="rdGT" value="nam"> Nam</label>
+                    <label><input type="radio" name="rdGT" value="nu"> Nữ</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="message">Giới thiệu bản thân</label>
+                <textarea id="message" name="message" rows="4" placeholder="Viết vài dòng về bản thân..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Gửi</button>
+        </form>
+    </div>
+
+</body>
 </html>
