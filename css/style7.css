@@ -1,6 +1,6 @@
 ﻿body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), #a4a09c); /* nền tím pastel nhạt */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), #a4a09c); 
   color: #333;
   min-height: 100vh;
   display: flex;
